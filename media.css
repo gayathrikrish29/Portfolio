@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+    z-index: 1;
+}
+
+.logo{
+    text-decoration: none;
+    color: blue;
+    font-weight: 700;
+    font-size: 2.4rem;
+
+}
+
+#check{
+    display: none;
+}
+.icons{
+    font-size: 2.4rem;
+    color: blue;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+}
+.navbar a{
+    font-size: 1.15rem;
+    color: blue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+
+}
+
+.content{
+    margin-top: 80px;
+}
+
+
+
+h1{
+    color: rgb(23, 23, 107);
+}
+
+p{
+    font-size: 1 rem;
+    line-height: 1.23;
+    
+}
+
+/* breakpoints : 480px-sm,768px-md,992px-lg,1280px-xl */
+
+@media (max-width:992px){
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+
+
+
+@media (max-width:768px){
+    .icons{
+        display: flex;
+
+    }
+    
+    #close-icon{
+        display: none;
+    }
+
+    #check:checked~ .icons #menu-icon{
+        display: none;
+
+    }
+    #check:checked~ .icons #close-icon{
+        display: block;
+
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: gainsboro;
+        height: 0px;
+        display: none;
+    }
+    .navbar a{
+        display: block;
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 1.5rem 0px;
+      
+    }
+
+    #check:checked~ .navbar{
+        height: 15rem;
+        display: block;
+    }
+
+
+    p{
+    font-size: 2 rem;
+    line-height: 1.5;
+    color:rgb(40, 40, 132);
+    }
+    .flex-container{
+        flex-wrap: wrap;
+    }
+}
+
+.flex-container{
+    display: flex;
+    
+}
+
+.flex-item{
+    width: 350px;
+    border: 1px solid;
+    margin: 10px;
+}
+
+img{
+    width: 100%;
+}
